@@ -1,0 +1,8 @@
+md5: 61ba8c924a08817a8e16109af5aecf73
+outs:
+- cache: true
+  md5: 4bcc813d03ccd8e6e199fd896d5d0976
+  metric: false
+  path: calendar.txt
+  persist: false
+wdir: .

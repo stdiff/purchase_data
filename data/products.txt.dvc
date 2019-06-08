@@ -1,0 +1,8 @@
+md5: 780b01ab4886fb7ceb8cac1316c1a7f0
+outs:
+- cache: true
+  md5: 6a4ee18890b72886a7f931f7de130fa1
+  metric: false
+  path: products.txt
+  persist: false
+wdir: .

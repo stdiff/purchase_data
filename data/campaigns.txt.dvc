@@ -1,0 +1,8 @@
+md5: 50bd70aca48b3e085879e7992f444ffc
+outs:
+- cache: true
+  md5: 901314b8dd0463c71d7c7dff27a3464f
+  metric: false
+  path: campaigns.txt
+  persist: false
+wdir: .

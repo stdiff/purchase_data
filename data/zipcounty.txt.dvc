@@ -1,0 +1,8 @@
+md5: 2e57f70a28f2527505ae2cb5b2cc5b0d
+outs:
+- cache: true
+  md5: 8033284cad57f493c410208265e008c6
+  metric: false
+  path: zipcounty.txt
+  persist: false
+wdir: .

@@ -1,0 +1,88 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+```
+
+
+```{r}
+df_customers <- read.csv("../data/customers.txt", sep="\t",
+                         stringsAsFactors=F)
+df_customers
+```
+
+```{r}
+df_products <- read.csv("../data/products.txt", sep="\t",
+                        stringsAsFactors=F)
+df_products
+```
+
+```{r}
+str(df_products)
+```
+
+```{r}
+df_campains <- read.csv("../data/campaigns.txt", sep="\t")
+df_campains
+```
+
+```{r}
+str(df_campains)
+```
+
+```{r}
+names(df_campains)
+```
+
+```{r}
+df_orders <- read.csv("../data/orders.txt", sep="\t", 
+                      stringsAsFactors = F)
+df_orders
+```
+
+```{r}
+str(df_orders)
+```
+
+```{r}
+for (col in names(df_orders)) {
+  typ <- class(df_orders[[col]])
+  cat(col,typ,"\n")
+}
+  
+```
+
+```{r}
+df_orderlines <- read.csv("../data/orderlines.txt", sep="\t",
+                          stringsAsFactors=)
+df_orderlines
+```
+
+```{r}
+str(df_orderlines)
+```
+
+```{r}
+for (col in names(df_orderlines)) {
+  typ <- class(df_orderlines[[col]])
+  cat(col,typ,"\n")
+}
+```
+
+```{r}
+df_zipcounty <- read.csv("../data/zipcounty.txt", sep="\t", 
+                         stringsAsFactors = F)
+df_zipcounty
+```
+
+```{r}
+str(df_zipcounty)
+```
+
+```{r}
+
+```
+

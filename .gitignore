@@ -1,8 +1,11 @@
 ## PyCharm
 .idea
 
+## original zips
+data/zips
+
 ## temporary workspace
-tmmp
+tmp
 
 *.sqlite
 

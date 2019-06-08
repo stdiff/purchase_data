@@ -1,0 +1,8 @@
+md5: 8050d22d80b7bd587e048c7cf977e760
+outs:
+- cache: true
+  md5: 1fb7e7d21510e7eabba400e88cbe183c
+  metric: false
+  path: orders.txt
+  persist: false
+wdir: .

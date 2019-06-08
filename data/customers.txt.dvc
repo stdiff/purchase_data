@@ -1,0 +1,8 @@
+md5: e26ee95c8a623ec70547af06b1e80025
+outs:
+- cache: true
+  md5: 75fb988fd61a30bc40c2f6cc04e733bb
+  metric: false
+  path: customers.txt
+  persist: false
+wdir: .
