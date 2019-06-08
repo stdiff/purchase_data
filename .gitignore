@@ -1,3 +1,9 @@
-data
-tmp
-.Rproj.user
+## PyCharm
+.idea
+
+## temporary workspace
+tmmp
+
+*.sqlite
+
+
