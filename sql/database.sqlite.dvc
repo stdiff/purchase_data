@@ -1,0 +1,8 @@
+md5: e11476d2c9d014fd4a2b630095b6e967
+outs:
+- cache: true
+  md5: 890d8c1cf39ce88175d442fedd32481c
+  metric: false
+  path: database.sqlite
+  persist: false
+wdir: .
