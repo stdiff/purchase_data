@@ -29,6 +29,7 @@ class Database:
 
         try:
             self.cursor.executescript(sql_statement)
+            self.connection.commit()
         except Exception as e:
             print("-- following sql statement is not executed")
             self.connection.rollback()
