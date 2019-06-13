@@ -3,7 +3,7 @@ Helper class to deal with the SQLite3 database
 """
 
 import sqlite3
-from typing import Union
+from typing import Union, Callable
 from pathlib import Path
 
 import pandas as pd
@@ -61,16 +61,24 @@ class Database:
         return pd.read_sql(query, self.connection, **kwargs)
 
 
-    def read_table(self, table:str, **kwargs) -> pd.DataFrame:
+    def read_table(self, table:str, is_datetime:Callable[[str],bool]=None,
+                   **kwargs) -> pd.DataFrame:
         """
         read the whole table from the DB and return it as a DataFrame
 
         :param table: name of the table
+        :param is_datetime: function to determin if a column is datetime
         :param kwargs: passed to pandas.read_sql
         :return: DataFrame
         """
         sql = "SELECT * FROM %s" % table
-        return self.read_query(sql, **kwargs)
+        df = self.read_query(sql, **kwargs)
+
+        if is_datetime is not None:
+            for col in [col for col in df.columns if is_datetime(col)]:
+                df[col] = pd.to_datetime(df[col])
+
+        return df
 
 
     def __enter__(self):
