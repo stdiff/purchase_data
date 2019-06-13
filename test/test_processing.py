@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import load_boston
 
-from lib.processing import InspectDf
+from lib.processing import Inspector
 
 
 def generate_data() -> pd.DataFrame:
@@ -41,7 +41,7 @@ class ProcessingTest(TestCase):
         """
         np.random.seed(1)
         df = generate_data()
-        df_inspection = InspectDf(df, m_cats=20)
+        df_inspection = Inspector(df, m_cats=20)
 
         ## variable type detection
         self.assertEqual(df_inspection.inspection.loc["CHAS", "variable"], "binary")
